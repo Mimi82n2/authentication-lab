@@ -1,0 +1,29 @@
+Question 1: What authentication scheme is used by default in Django Rest Framework's browsable API? How is this managed?
+A. The default authentication schemes can be managed using the DEFAULT_AUTHENTICATION_CLASSES setting under REST_FRAMEWORK.
+The SessionAuthentication scheme uses Django's default session backend for authentication.
+The BasicAuthentication scheme uses HTTP Basic Authentication.
+
+Question 2: What authentication scheme is used by httpie when querying with the -a or --auth option flag?
+A. -a and --auth flags uses the basic authentication scheme.
+
+Question 3: Question 3: What is the difference between Session Authentication and Token Authentication? How is Token Authentication an improvement over Basic Authentication?
+A. 
+Session Authentication of the connection stores the authentication details. The Session Authentication method makes the server store the details. 
+- Session id stored on cookie in user's browser, server verifies cookie id with session id on the server.
+In Token Authentication, the client stores the authentication details and sends it in the header to communicate with server. 
+
+Token Authentication is an improvement over Basic Authentication because you don't have to share a password, you would share authorization tokens instead.
+Token Authentication is also more convenient as it allows you to create multiple tokens for a single account and expire unneeded tokens. 
+
+Question 4: Question 4: Provide a high level summary of what happens during an OAuth2 authentication flow. For instance: bitbucket.org > Log In > Log in with Google. What happens when I click "Log in with Google"?
+A.
+The following steps occur when you click "Log In" with OAuth2 authentication.
+1. Client requests authorization from the resource owner.
+2. Client receives authorization grant from the resource owner.
+3. Client requests an access token by authentication with the authorization server and presenting the grant.
+4. Authorization server authenticates client and issues access token if the grant is valid.
+5. Client requests protected resource from the resource server by presenting the access token
+6. Resource server validates the token and serves the request if the token is valid. 
+
+Question 5: Please provide a link to your code.
+A. https://github.com/Mimi82n2/authentication-lab
